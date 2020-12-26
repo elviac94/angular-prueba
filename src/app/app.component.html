@@ -1,0 +1,43 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+
+</style>
+<div [ngClass]="{'hide':open, 'no-hide':!open}" class="content" role="main">
+  <h4 class="section__title">female</h4>
+   <ul class="female">
+     <ng-container *ngFor="let cow of cows">
+       <li *ngIf="cow.sex === 'FEMALE';">
+         <cow-item [cow]="cow" (select)="onSelectCow(cow)"></cow-item>
+      </li>
+     </ng-container>
+   </ul>
+   <h4 class="section__title">male</h4>
+   <ul class="male">
+    <ng-container *ngFor="let cow of cows">
+      <li *ngIf="cow.sex === 'MALE';">
+        <cow-item [cow]="cow" (select)="onSelectCow(cow)"></cow-item>
+      </li>
+    </ng-container>
+   </ul>
+</div>
+<modal *ngIf="selectedCow" [cow]="selectedCow" (close)="onClosedModal()"></modal>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>

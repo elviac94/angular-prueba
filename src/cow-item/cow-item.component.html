@@ -1,0 +1,11 @@
+<div class="cow__containter--item">
+    <div class="name__container">
+        <img [src]="cow.img"/>
+        <h6 class="name--title">Name: {{cow.name}}</h6>
+    </div>
+    <div class="genus">
+        <h6>Genus: {{cow.genus | lowercase}}</h6>
+        <h6>Sex: {{cow.sex | lowercase}}</h6>
+    </div>
+    <button (click)="onClick(cow)">More</button>
+    </div>

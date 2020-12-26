@@ -1,0 +1,16 @@
+<div class="modal__container">
+    <div class="modal__infor">
+    <img [src]="cow.img"/>
+    <div class="name--genus">
+        <h6>Name: {{cow.name}}</h6>
+        <h6>Genus: {{cow.genus | lowercase}}</h6>
+        <h6>Sex: {{cow.sex |lowercase}}</h6>
+    </div>
+    <h6>Born: {{cow.date_birth | date:'dd/MM/yyyy, h:mm a'}}</h6>
+    <h6>Age: {{cow.age.value}} {{cow.age.text | lowercase}}</h6>
+    <h6>Id Legal: {{cow._id_legal}}</h6>
+    <h6>Created: {{cow.createdAt | date:'dd/MM/yyyy, h:mm a'}}</h6>
+    <h6>Updated: {{cow.updatedAt | date:'dd/MM/yyyy, h:mm a'}}</h6>
+    <button (click)="onClick()">Close</button>
+</div>
+</div>

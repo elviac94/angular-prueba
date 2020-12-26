@@ -1,0 +1,57 @@
+.cow__containter--item {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  & .name__container {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    align-self: self-start;
+
+    & .name--title{
+      margin-bottom: 6px;
+      align-self: flex-end;
+      font-size: 18px;
+    }
+  }
+
+  & .genus {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    & h6{
+      font-size: 16px;
+    }
+
+    & h6:first-child{
+      margin-left: 45px;;
+    }
+  }
+}
+
+img {
+  width: 45px;
+  height: 45px;
+}
+
+button {
+  background-color: #333333;
+  outline: none;
+  color: white;
+  height: 22px;
+  width: 65px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover,:active{
+    opacity: .6;
+  }
+}
